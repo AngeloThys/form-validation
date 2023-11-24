@@ -1,6 +1,3 @@
-// lets start with the individual checks
-// invalid: outline + instructions
-// valid: outline + instructions
 export function addEmailInputValidation() {
   const emailInput = document.querySelector(
     ".email-container .container-input",
@@ -140,7 +137,6 @@ function validatePasswordConfirmation() {
   }
 }
 
-// a general check off all the input fields
 export function addFormValidation() {
   const submitButton = document.querySelector(".submit-button");
   const form = document.querySelector("form");
