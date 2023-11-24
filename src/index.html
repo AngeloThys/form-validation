@@ -7,33 +7,53 @@
     <title>Form Validation</title>
   </head>
   <body>
+    <dialog class="successful-creation">
+      <div class="creation-message-container">
+        <h2>Nice! You successfully created a user!</h2>
+      </div>
+    </dialog>
     <form novalidate>
       <div class="email-container input-container">
         <h1 class="container-header">Email</h1>
-        <input type="text" class="container-input" />
-        <div class="instructions-container"></div>
+        <input type="email" class="container-input" required />
+        <div class="instructions-container">
+          <h2>! Hint:</h2>
+          <span class="instructions"></span>
+        </div>
       </div>
       <div class="country-container input-container">
         <h1 class="container-header">Country</h1>
-        <input type="text" class="container-input" />
-        <div class="instructions-container"></div>
+        <input type="text" class="container-input" required />
+        <div class="instructions-container">
+          <h2>! Hint:</h2>
+          <span class="instructions"></span>
+        </div>
       </div>
       <div class="zip-container input-container">
         <h1 class="container-header">ZIP</h1>
-        <input type="text" class="container-input" />
-        <div class="instructions-container"></div>
+        <input type="text" class="container-input" required />
+        <div class="instructions-container">
+          <h2>! Hint:</h2>
+          <span class="instructions"></span>
+        </div>
       </div>
       <div class="password-container input-container">
         <h1 class="container-header">Password</h1>
-        <input type="text" class="container-input" />
-        <div class="instructions-container"></div>
+        <input type="password" class="container-input" required/>
+        <div class="instructions-container">
+          <h2>! Hint:</h2>
+          <span class="instructions"></span>
+        </div>
       </div>
       <div class="password-confirmation-container input-container">
         <h1 class="container-header">Password Confirmation</h1>
-        <input type="text" class="container-input" />
-        <div class="instructions-container"></div>
+        <input type="password" class="container-input" required/>
+        <div class="instructions-container">
+          <h2>! Hint:</h2>
+          <span class="instructions"></span>
+        </div>
       </div>
-      <button class="submit-button" type="button">Create !</button>
+      <button class="submit-button">Create !</button>
     </form>
   </body>
 </html>
