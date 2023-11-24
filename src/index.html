@@ -1,12 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="index.js"></script>
-  <title>Template</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js"></script>
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <form novalidate>
+      <div class="email-container input-container">
+        <h1 class="container-header">Email</h1>
+        <input type="text" class="container-input" />
+        <div class="instructions-container"></div>
+      </div>
+      <div class="country-container input-container">
+        <h1 class="container-header">Country</h1>
+        <input type="text" class="container-input" />
+        <div class="instructions-container"></div>
+      </div>
+      <div class="zip-container input-container">
+        <h1 class="container-header">ZIP</h1>
+        <input type="text" class="container-input" />
+        <div class="instructions-container"></div>
+      </div>
+      <div class="password-container input-container">
+        <h1 class="container-header">Password</h1>
+        <input type="text" class="container-input" />
+        <div class="instructions-container"></div>
+      </div>
+      <div class="password-confirmation-container input-container">
+        <h1 class="container-header">Password Confirmation</h1>
+        <input type="text" class="container-input" />
+        <div class="instructions-container"></div>
+      </div>
+      <button class="submit-button">Create !</button>
+    </form>
+  </body>
 </html>
