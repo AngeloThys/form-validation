@@ -6,7 +6,7 @@ export function addEmailInputValidation() {
     ".email-container .container-input",
   );
 
-  emailInput.addEventListener("change", validateEmail);
+  emailInput.addEventListener("input", validateEmail);
 }
 
 function validateEmail() {
@@ -16,10 +16,11 @@ function validateEmail() {
   const emailInstructions = document.querySelector(
     ".email-container .instructions",
   );
+  const hint = document.querySelector(".email-container h2");
 
   if (emailInput.validity.valid) {
     emailInstructions.textContent = "";
-    emailInstructions.className = "instructions valid";
+    hint.className = "valid";
   } else {
     if (emailInput.validity.valueMissing) {
       emailInstructions.textContent =
@@ -29,7 +30,7 @@ function validateEmail() {
         "Invalid format. Please, enter a valid email address. e.g. test@test.com";
     }
 
-    emailInstructions.className = "instructions invalid";
+    hint.className = "invalid";
   }
 }
 
@@ -38,7 +39,7 @@ export function addCountryInputValidation() {
     ".country-container .container-input",
   );
 
-  countryInput.addEventListener("change", validateCountry);
+  countryInput.addEventListener("input", validateCountry);
 }
 
 function validateCountry() {
@@ -48,21 +49,22 @@ function validateCountry() {
   const countryInstructions = document.querySelector(
     ".country-container .instructions",
   );
+  const hint = document.querySelector(".country-container h2");
 
   if (countryInput.validity.valid) {
     countryInstructions.textContent = "";
-    countryInstructions.className = "instructions valid";
+    hint.className = "valid";
   } else if (countryInput.validity.valueMissing) {
     countryInstructions.textContent =
       "Required field. Please, enter a country.";
-    countryInstructions.className = "instructions invalid";
+    hint.className = "invalid";
   }
 }
 
 export function addZipInputValidation() {
   const zipInput = document.querySelector(".zip-container .container-input");
 
-  zipInput.addEventListener("change", validateZip);
+  zipInput.addEventListener("input", validateZip);
 }
 
 function validateZip() {
@@ -70,13 +72,14 @@ function validateZip() {
   const zipInstructions = document.querySelector(
     ".zip-container .instructions",
   );
+  const hint = document.querySelector(".zip-container h2");
 
   if (zipInput.validity.valid) {
     zipInstructions.textContent = "";
-    zipInstructions.className = "instructions valid";
+    hint.className = "valid";
   } else if (zipInput.validity.valueMissing) {
     zipInstructions.textContent = "Required field. Please, enter a zip code.";
-    zipInstructions.className = "instructions invalid";
+    hint.className = "invalid";
   }
 }
 
@@ -85,7 +88,7 @@ export function addPasswordInputValidation() {
     ".password-container .container-input",
   );
 
-  passwordInput.addEventListener("change", validatePassword);
+  passwordInput.addEventListener("input", validatePassword);
 }
 
 function validatePassword() {
@@ -95,14 +98,15 @@ function validatePassword() {
   const passwordInstructions = document.querySelector(
     ".password-container .instructions",
   );
+  const hint = document.querySelector(".password-container h2");
 
   if (passwordInput.validity.valid) {
     passwordInstructions.textContent = "";
-    passwordInstructions.className = "instructions valid";
+    hint.className = "valid";
   } else if (passwordInput.validity.valueMissing) {
     passwordInstructions.textContent =
       "Required field. Please, enter a password.";
-    passwordInstructions.className = "instructions invalid";
+    hint.className = "invalid";
   }
 }
 
@@ -112,7 +116,7 @@ export function addPasswordConfirmationInputValidation() {
   );
 
   passwordConfirmationInput.addEventListener(
-    "change",
+    "input",
     validatePasswordConfirmation,
   );
 }
@@ -124,14 +128,15 @@ function validatePasswordConfirmation() {
   const passwordConfirmationInstructions = document.querySelector(
     ".password-confirmation-container .instructions",
   );
+  const hint = document.querySelector(".password-confirmation-container h2");
 
   if (passwordConfirmationInput.validity.valid) {
     passwordConfirmationInstructions.textContent = "";
-    passwordConfirmationInstructions.className = "instructions valid";
+    hint.className = "valid";
   } else if (passwordConfirmationInput.validity.valueMissing) {
     passwordConfirmationInstructions.textContent =
       "Required field. Please, enter the password again.";
-    passwordConfirmationInstructions.className = "instructions invalid";
+    hint.className = "invalid";
   }
 }
 
